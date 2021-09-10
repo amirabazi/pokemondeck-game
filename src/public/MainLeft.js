@@ -1,5 +1,6 @@
-import LoginButton from "./LoginButton"
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 
 const MainLeft = () => {
     return (
@@ -7,7 +8,7 @@ const MainLeft = () => {
             <div className='content'>
                 <h1>Gotta Catch 'Em All!</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto optio delectus fugiat nulla iusto laborum quidem qui deleniti, vel numquam quibusdam perspiciatis, tempora velit suscipit excepturi, a non quis.</p>
-                <LoginButton />
+                <Link to='/login'><button>Lets Start</button></Link>   
             <div className='otherContent'>
                 <div className='cards'>
                 <p>Latest Pokemon News:</p>

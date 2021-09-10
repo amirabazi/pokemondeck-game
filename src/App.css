@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap");
 
 * {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: "Poppins", sans-serif;  
   color: black;
 }
 
@@ -12,8 +10,11 @@ body {
   margin: 0;
   padding: 0;
   background-image: url("https://images5.alphacoders.com/531/thumb-1920-531970.jpg");
-  background-repeat: none;
   background-size: cover;
+  background-repeat: none;
+  width: 100%;
+  height: 100%;
+  
 }
 
 .nav {
@@ -23,14 +24,23 @@ body {
   padding: 1.5rem 1rem;
 }
 
+.navBottom{
+  display: none;
+}
+
 .rightSide {
   display: flex;
   flex-direction: row;
 }
 
-.rightSide a {
+.hamburgerMenu {
+  display: none;
+}
+
+.rightSide .navRight {
   background-color: rgb(24, 24, 24);
   border: 1px solid rgb(116, 116, 117);
+  box-shadow: 5px 5px 11px -3px rgba(58, 58, 58, 0.932);
   color: #fff;
   border-radius: 5px;
   margin-right: 1rem;
@@ -48,10 +58,14 @@ body {
 }
 
 .logo {
-  width: 150px;
-  height: auto;
+  
   margin-left: 3rem;
-  cursor: pointer;
+  cursor: pointer;  
+}
+
+.logo img{
+  height: 100%;
+  width: 100%;
 }
 
 .searchBox input {
@@ -73,14 +87,8 @@ body {
   box-shadow: 7px 8px 11px -3px rgba(58, 58, 58, 0.3);
 }
 
-.mainLeft {
-  border-right: none;
-  border-radius: 1rem;
-  width: 50%;
-}
-
 .content {
-  margin: 3rem 5rem;
+  margin: 0 5rem;
 }
 
 .content h1 {
@@ -95,6 +103,7 @@ body {
 
 .content button {
   background-color: rgb(24, 24, 24);
+  box-shadow: 5px 5px 11px -3px rgba(58, 58, 58, 0.932);
   color: #fff;
   padding: 0.5rem 1.4rem;
   border: 1px solid rgb(116, 116, 117);
@@ -111,19 +120,13 @@ body {
 }
 
 .otherContent {
-  display: flex;
-  margin-top: 8rem;
-  width: 100%;
+  margin-top: 5rem;
 }
 
 .cards iframe {
   border-radius: 5px;
   opacity: 0.92;
   box-shadow: 10px 10px 11px -3px rgba(7, 7, 7, 0.8);
-}
-
-.cards {
-  padding: 0 10px;
 }
 
 .cards p {
@@ -148,14 +151,17 @@ body {
 
 .loginForm {
   display: flex;
-  width: 40%;
+  width: 35%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 5px;
-  margin-left: 3rem;
+  margin-left: 4rem;
   margin-top: 12rem;
   padding: 10px;
+  border: 1px solid #ffcd05cb;
+  background: #ffcd052d ;
+  box-shadow: 5px 5px 11px -3px rgba(58, 58, 58, 0.932);
 }
 
 .loginForm label {
@@ -189,6 +195,7 @@ body {
   border-radius: 5px;
   font-weight: 800;
   font-size: 1.1rem;
+  box-shadow: 5px 5px 11px -3px rgba(58, 58, 58, 0.1);  
 }
 
 .loginForm button:hover {
@@ -204,12 +211,12 @@ body {
 .img-wraper{
   width: 150px;
   height: 150px;
-  background-color: rgb(86 86 86 / 79%);
-  border: 1px solid rgb(231, 231, 231);
+  background: #ffcd0588;
+  padding: 0.5rem;  
+  border: 1px solid #ffcd05da;;
   box-shadow: 5px 5px 11px -3px rgba(58, 58, 58, 0.1);
   margin: 2rem 1.5rem;
   border-radius: 5px;
-
 }
 
 .pokeWrap {
@@ -217,8 +224,7 @@ body {
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  margin-left: 3rem;
-     
+  margin-left: 3rem;     
 }
 
 .img-wraper:hover{
@@ -228,8 +234,144 @@ body {
 }
 
 .img-wraper img{
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
+}
+
+
+
+@media only screen and (max-width: 780px) {   
+  
+  .rightSide .navRight{
+    display: none;     
+  }
+
+  .rightSide form{
+    display: inline;
+  }
+  
+  .rightSide .navRight{
+    padding:0;
+    margin: 0.5rem;
+    
+  }
+  .searchBox input {
+    margin-right: 1rem;
+    width: 7rem;
+  }
+
+  .hamburgerMenu{
+    display:block;
+  }
+
+  .content{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+  }
+
+  .content h1{
+    font-size: 2.1rem;
+  }
+
+  .content p{
+    text-align: center;
+  }
+
+  .logo{
+    margin-left:0;
+    width: 100px;
+  }
+
+  .cards{
+    width: 100%;
+    height: auto;
+  }
+
+  .cards iframe{
+    width:100%;
+  }
+
+  .content button{
+    width: 10rem;
+  }
+
+ .loginForm{
+    width: 100%;
+    margin-left:0;
+    margin-top: 3rem;
+    padding:0;
+    border: none;
+    background: none;
+    box-shadow: none;
+  }
+
+  .loginForm h1{
+    text-align: center;
+  }
+
+  .loginForm button{
+    width: 7rem;
+  }
+
+  .pokeWrap{
+    margin-left:0;
+    justify-content: center;
+  }
+
+  .img-wraper{
+    width:120px;
+    height: 120px;
+  }
+
+  .App{
+    margin-bottom: 4rem;
+  }
+
+  .navBottom{
+  background-color: rgba(22, 22, 22, 0.959) ;
+  position:fixed;
+  bottom: 0;
+  height: 4rem;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;  
+  }
+
+  .navBottom .searchBox{
+    display: none;
+  }
+
+  .pokeball{
+    width: 30px;
+    height: 30px;
+  }
+
+  .pokeball img{
+    width: 100%;
+    height:  100%;
+  }
+
+  .about{
+    width: 30px;
+    height: 30px;
+  }
+
+  .about img{
+    width: 100%;
+    height:  100%;
+  }
+
+  .bottomTitle{
+    color: white;
+    padding:0;
+    margin:0;
+  } 
+
 }
