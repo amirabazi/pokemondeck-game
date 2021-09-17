@@ -76,6 +76,7 @@ body {
   outline: none;
   font-weight: bold;
   margin-right: 3rem;
+  
 }
 ::placeholder {
   font-weight: 800;
@@ -111,12 +112,17 @@ body {
   font-weight: 800;
   margin-top: 2rem;
   font-size: 17px;
+  min-width: 8rem;
 }
 
 .content button:hover {
   opacity: 0.9;
   box-shadow: 5px 5px 11px -3px rgba(58, 58, 58, 0.1);
   cursor: pointer;
+}
+
+.btn-register{
+  margin: 0 1rem;
 }
 
 .otherContent {
@@ -240,138 +246,12 @@ body {
   flex-direction: row;
 }
 
-
-
-@media only screen and (max-width: 780px) {   
+.btn-register{
+  margin:0;
   
-  .rightSide .navRight{
-    display: none;     
-  }
-
-  .rightSide form{
-    display: inline;
-  }
-  
-  .rightSide .navRight{
-    padding:0;
-    margin: 0.5rem;
-    
-  }
-  .searchBox input {
-    margin-right: 1rem;
-    width: 7rem;
-  }
-
-  .hamburgerMenu{
-    display:block;
-  }
-
-  .content{
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center
-  }
-
-  .content h1{
-    font-size: 2.1rem;
-  }
-
-  .content p{
-    text-align: center;
-  }
-
-  .logo{
-    margin-left:0;
-    width: 100px;
-  }
-
-  .cards{
-    width: 100%;
-    height: auto;
-  }
-
-  .cards iframe{
-    width:100%;
-  }
-
-  .content button{
-    width: 10rem;
-  }
-
- .loginForm{
-    width: 100%;
-    margin-left:0;
-    margin-top: 3rem;
-    padding:0;
-    border: none;
-    background: none;
-    box-shadow: none;
-  }
-
-  .loginForm h1{
-    text-align: center;
-  }
-
-  .loginForm button{
-    width: 7rem;
-  }
-
-  .pokeWrap{
-    margin-left:0;
-    justify-content: center;
-  }
-
-  .img-wraper{
-    width:120px;
-    height: 120px;
-  }
-
-  .App{
-    margin-bottom: 4rem;
-  }
-
-  .navBottom{
-  background-color: rgba(22, 22, 22, 0.959) ;
-  position:fixed;
-  bottom: 0;
-  height: 4rem;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;  
-  }
-
-  .navBottom .searchBox{
-    display: none;
-  }
-
-  .pokeball{
-    width: 30px;
-    height: 30px;
-  }
-
-  .pokeball img{
-    width: 100%;
-    height:  100%;
-  }
-
-  .about{
-    width: 30px;
-    height: 30px;
-  }
-
-  .about img{
-    width: 100%;
-    height:  100%;
-  }
-
-  .bottomTitle{
-    color: white;
-    padding:0;
-    margin:0;
-  } 
-
 }
+
+.btn-login{
+  margin-left: 1rem;
+}
+

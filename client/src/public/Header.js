@@ -1,21 +1,5 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-const Header = (props) => {
-    useState();
-    const [menuOpen, setMenuOpen] = useState(false);
-    function toggleMenu(){
-        setMenuOpen(!menuOpen); 
-        if(menuOpen === true){
-            
-            console.log('open');
-        }else {
-            console.log('closed');
-        }
-           
-          
-
-    }
-
+const Header = () => { 
     return (
         <div className='nav'>            
             <div className='logo'>

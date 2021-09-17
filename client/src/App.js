@@ -1,4 +1,5 @@
 import './App.css';
+import './Responsive.css';
 import Header from './public/Header';
 import MainLeft from './public/MainLeft';
 import LoginForm from './public/LoginForm';
@@ -11,6 +12,7 @@ import {
   Route,  
 } from "react-router-dom";
 import ResponsiveMenu from './public/ResponsiveMenu';
+import RegisterForm from './public/RegisterForm';
 
 export default function App() {
   return (
@@ -22,6 +24,9 @@ export default function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
           </Route>
           <Route path="/pokelist">
             <Pokelist />
@@ -75,3 +80,14 @@ function Login() {
     </div>
 );
 }
+
+function Register() {
+  return (
+    <div className="App">
+      <Header />  
+      <RegisterForm />
+      <ResponsiveMenu/>   
+    </div>
+);
+}
+
