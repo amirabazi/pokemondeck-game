@@ -9,7 +9,7 @@ const Header = () => {
                 <Link to='/pokelist' className='navRight'>Pokemon Deck</Link>
                 <Link to='/About' className='navRight'>About</Link>                
                 <form className='searchBox' action="">
-                    <input type="search" id="search" name="search" placeholder='Search' />               
+                    <input type="search" id="searchHeader" name="search" placeholder='Search' />               
                 </form>   
             </div>             
         </div>

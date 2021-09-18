@@ -9,8 +9,8 @@ const AboutPage = () => {
                 <div className='otherContent'>
                     <div className='cards'>
                         <p>Socials:</p>
-                        <a className='socials' href='https://www.instagram.com'>instagram</a> <span>// </span>
-                        <a className='socials' href='https://www.youtube.com/'>youtube</a> <span>// </span>
+                        <a className='socials' href='https://www.instagram.com'>instagram</a> <span>/ </span>
+                        <a className='socials' href='https://www.youtube.com/'>youtube</a> <span>/ </span>
                         <a className='socials' href='https://www.facebook.com'>facebook</a>
                     </div>
                 </div>
