@@ -15,8 +15,13 @@ const RegisterForm = () => {
             username: newUser,
             password: newPassword,
         }).then((res) => {
-            document.location.href = '/';
+            console.log(res.data);
+            if(res.data==='korisnik vec postoji'){
+                alert('korisnik vec postoji!');
+            }else{
+            document.location.href = '/login';
             alert('ur registred');
+            }
         }).catch((error) => {
             console.log(error)
             alert('error');

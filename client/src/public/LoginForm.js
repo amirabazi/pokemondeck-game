@@ -16,7 +16,7 @@ const LoginForm = () => {
             console.log(res.data);
             if(res.data==='uspjesna prijava'){
                 alert('uspjesna prijava');
-                document.location.href='/';
+                document.location.href='/pokelist';
             }else if(res.data==='nije tacna sifra'){
                 alert('sifra nije tacna');
             }else{

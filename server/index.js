@@ -15,13 +15,15 @@ connection.connect();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-
+// CORD
 app.use((req, res, next) =>  {
     res.header("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
 
+
+// REGISTER
 app.post('/user/register', (req,res) => {
 
     const email = req.body.email;
@@ -31,12 +33,16 @@ app.post('/user/register', (req,res) => {
     const sqlInput = "INSERT INTO users (email, username, password) VALUES (?,?,?)";
     connection.query(sqlInput,[email,username, password], (error,result) => {
         console.log(result)
+        if(result===undefined){
+            res.send('korisnik vec postoji')
+        }else{
+            res.send();
+        }
     })
-    console.log(req);   
-    res.send();
-    
+    console.log(req);       
 })
 
+//LOGIN
 app.post('/user/login', (req,res) => {
     
     const username = req.body.username;
@@ -52,9 +58,7 @@ app.post('/user/login', (req,res) => {
         }else{
             res.send('uspjesna prijava');
         }        
-    })    
-   
-
+    })     
 })
 
 app.listen(3001, ()=>{
